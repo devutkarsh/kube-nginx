@@ -44,9 +44,6 @@ data:
     location /example/ {
     proxy_pass http://example.com/ ;
     }
-    location /static/ {
-    proxy_pass  http://s3-streamer:9999/ ;
-    }
     location ~* \.(js|jpg|png|css)$ {
     root /usr/share/nginx/html/;
     }
@@ -100,7 +97,7 @@ metadata:
 spec:
   selector:
     app: nginx
-  type: NodePort
+  type: ClusterIP
   ports:
     - name: http
       port: 80
