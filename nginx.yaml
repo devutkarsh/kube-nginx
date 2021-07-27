@@ -41,8 +41,8 @@ data:
     root /usr/share/nginx/html/;
     index  index.html;
     }
-    location /example/ {
-    proxy_pass http://example.com/ ;
+    location /example/list {
+    proxy_pass http://example.com/list ;
     }
     location ~* \.(js|jpg|png|css)$ {
     root /usr/share/nginx/html/;
